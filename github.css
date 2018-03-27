@@ -1,0 +1,218 @@
+*{
+  box-sizing: border-box;/*width+boder+padding+cotent*/
+}
+body{
+  margin: 0px;
+  line-height: 1.5;
+}
+@media (min-width: 1012px){
+    /* header部分 */
+    header{
+    display: block;
+    position: relative;
+    padding-top: 16px;
+    padding-bottom:16px;
+    background-color: rgb(36,41,46);
+    }
+    .text{
+    color: rgba(255,255,255,0.75);
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    }
+    header a{
+    text-decoration-line: none;
+    text-decoration-color: rgb(255,255,255);
+    text-decoration-style: solid;
+    white-space: nowrap;
+    color: rgb(255,255,255);
+    }
+    .flex{
+    display: flex;/*设置为flex后,子项目不按block*/
+    }
+    .flex_justify_between{
+    justify-content: space-between;
+    }
+    .flex_items_center{
+    align-items: center;
+    }
+    .container{
+    max-width: 1012px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+    }
+    .head_logo{
+    margin-left: -2px;
+    margin-right: 15px;
+    }
+    .head_logo svg{
+    fill: currentColor;
+    float: left;/*有疑问,没有设置float,a的height计算为39 */
+    width: 32px;
+    height: 32px;
+    }
+    #octicon{
+      display: none;
+    }
+    .container_nav_input{
+    flex:auto;
+    }
+    header nav{
+    margin-top: 0px;
+    display: block;
+    }
+    header nav ul{
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: outside;
+    padding-left: 0;
+    margin-top:0;
+    margin-bottom: 0px;
+    }
+    header nav ul li{
+    display:list-item;
+    margin-left: 24px;
+    }
+    header nav ul li:first-child{
+    margin-left: 8px
+    }
+    header .container_input{
+    margin-right: 16px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    }
+    header input{
+    background-color:rgba(255,255,255,0.125) ;
+    border-radius: 3px;
+    font-weight: 400px;
+    line-height: 20px;
+    letter-spacing: normal;
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+    margin: 0;
+    padding: 0px 0 0px 8px;
+    border: none;
+    min-height: 30px;
+    width: 200px;
+    }
+    header span div{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    }
+    header span div a{
+    font-weight: 600;
+    }
+    header span div span{
+    color: rgb(88,96,105);
+    }
+
+  }
+ @media (max-width: 1012px){
+  header{
+  display: block;
+  position: relative;
+  padding-top: 16px;
+  padding-bottom:16px;
+  background-color: rgb(36,41,46);
+  }
+  .flex{
+  display: flex;/*设置为flex后,子项目不按block*/
+  }
+  .flex_justify_between{
+  justify-content: space-between;
+  }
+  .flex_items_center{
+  align-items: center;
+  }
+  .container{
+  max-width: 1012px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 40px;
+  padding-left: 40px;
+  display: block;
+  }
+  #octicon{
+    fill:rgb(255,255,255);
+    cursor: pointer;
+  }
+  .text{
+  color: rgba(255,255,255,0.75);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  }
+  header a{
+  text-decoration-line: none;
+  text-decoration-color: rgb(255,255,255);
+  text-decoration-style: solid;
+  white-space: nowrap;
+  color: rgb(255,255,255);
+  }
+  .head_logo{
+  margin-left: -2px;
+  margin-right: 15px;
+  }
+  .head_logo svg{
+  fill: currentColor;
+  float: left;/*有疑问,没有设置float,a的height计算为39 */
+  width: 32px;
+  height: 32px;
+  }
+  .container_nav_input{
+    display: none;
+  }
+  .open{
+    display: block;
+  }
+  header nav{
+    margin-top: 16px;
+  }
+  header nav ul{
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+  padding-left: 0;
+  margin-top:0;
+  margin-bottom: 0px;
+  }
+  header nav ul li{
+  display:block;
+  border-top: 1px solid rgb(68,77,86);
+  padding: 16px 0px 16px 0px;
+  text-align: left;
+  margin: 0px;
+  }
+  .container_input{
+    border-top: 1px solid rgb(68,77,86);
+    padding: 16px 0px 16px 0px;
+  }
+  header input{
+  background-color:rgba(255,255,255,0.125) ;
+  border-radius: 3px;
+  font-weight: 400px;
+  line-height: 20px;
+  letter-spacing: normal;
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+  margin: 0;
+  padding: 0px 0 0px 8px;
+  border: none;
+  min-height: 30px;
+  width: 100%;
+  }
+  .container_input+span>div{
+    border-top: 1px solid rgb(68,77,86);
+    padding: 8px 0px 8px 0px;
+  }
+  header span div{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  }
+  header span div a{
+  font-weight: 600;
+  }
+  header span div span{
+  color: rgb(88,96,105);
+  }
+}
