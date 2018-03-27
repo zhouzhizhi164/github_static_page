@@ -5,19 +5,123 @@ body{
   margin: 0px;
   line-height: 1.5;
 }
-@media (min-width: 1012px){
-    /* header部分 */
-    header{
-    display: block;
-    position: relative;
-    padding-top: 16px;
-    padding-bottom:16px;
-    background-color: rgb(36,41,46);
+.flex{
+display: flex;/*设置为flex后,子项目不按block*/
+}
+.flex_justify_between{
+justify-content: space-between;
+}
+.flex_items_center{
+align-items: center;
+}
+.text{
+color: rgba(255,255,255,0.75);
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.5;
+word-wrap: break-word;
+}
+/* header部分 */
+header{
+  display: block;
+  position: relative;
+  padding-top: 16px;
+  padding-bottom:16px;
+  background-color: rgb(36,41,46);
+}
+  @media (min-width: 1012px){
+      header a{
+      text-decoration-line: none;
+      text-decoration-color: rgb(255,255,255);
+      text-decoration-style: solid;
+      white-space: nowrap;
+      color: rgb(255,255,255);
+      }
+      .container{
+      max-width: 1012px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 16px;
+      padding-left: 16px;
+      }
+      .head_logo{
+      margin-left: -2px;
+      margin-right: 15px;
+      }
+      .head_logo svg{
+      fill: currentColor;
+      float: left;/*有疑问,没有设置float,a的height计算为39 */
+      width: 32px;
+      height: 32px;
+      }
+      #octicon{
+        display: none;
+      }
+      .container_nav_input{
+      flex:auto;
+      }
+      header nav{
+      margin-top: 0px;
+      display: block;
+      }
+      header nav ul{
+      list-style-type: none;
+      list-style-image: none;
+      list-style-position: outside;
+      padding-left: 0;
+      margin-top:0;
+      margin-bottom: 0px;
+      }
+      header nav ul li{
+      display:list-item;
+      margin-left: 24px;
+      }
+      header nav ul li:first-child{
+      margin-left: 8px
+      }
+      header .container_input{
+      margin-right: 16px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      }
+      header input{
+      background-color:rgba(255,255,255,0.125) ;
+      border-radius: 3px;
+      font-weight: 400px;
+      line-height: 20px;
+      letter-spacing: normal;
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+      margin: 0;
+      padding: 0px 0 0px 8px;
+      border: none;
+      min-height: 30px;
+      width: 200px;
+      }
+      header span div{
+      padding-top: 8px;
+      padding-bottom: 8px;
+      }
+      header span div a{
+      font-weight: 600;
+      }
+      header span div span{
+      color: rgb(88,96,105);
+      }
+
     }
-    .text{
-    color: rgba(255,255,255,0.75);
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 16px;
+  @media (max-width: 1012px){
+    .container{
+    max-width: 1012px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 40px;
+    padding-left: 40px;
+    display: block;
+    }
+    #octicon{
+      fill:rgb(255,255,255);
+      cursor: pointer;
     }
     header a{
     text-decoration-line: none;
@@ -25,22 +129,6 @@ body{
     text-decoration-style: solid;
     white-space: nowrap;
     color: rgb(255,255,255);
-    }
-    .flex{
-    display: flex;/*设置为flex后,子项目不按block*/
-    }
-    .flex_justify_between{
-    justify-content: space-between;
-    }
-    .flex_items_center{
-    align-items: center;
-    }
-    .container{
-    max-width: 1012px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 16px;
-    padding-left: 16px;
     }
     .head_logo{
     margin-left: -2px;
@@ -52,15 +140,14 @@ body{
     width: 32px;
     height: 32px;
     }
-    #octicon{
+    .container_nav_input{
       display: none;
     }
-    .container_nav_input{
-    flex:auto;
+    .open{
+      display: block;
     }
     header nav{
-    margin-top: 0px;
-    display: block;
+      margin-top: 16px;
     }
     header nav ul{
     list-style-type: none;
@@ -71,16 +158,15 @@ body{
     margin-bottom: 0px;
     }
     header nav ul li{
-    display:list-item;
-    margin-left: 24px;
+    display:block;
+    border-top: 1px solid rgb(68,77,86);
+    padding: 16px 0px 16px 0px;
+    text-align: left;
+    margin: 0px;
     }
-    header nav ul li:first-child{
-    margin-left: 8px
-    }
-    header .container_input{
-    margin-right: 16px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    .container_input{
+      border-top: 1px solid rgb(68,77,86);
+      padding: 16px 0px 16px 0px;
     }
     header input{
     background-color:rgba(255,255,255,0.125) ;
@@ -94,7 +180,11 @@ body{
     padding: 0px 0 0px 8px;
     border: none;
     min-height: 30px;
-    width: 200px;
+    width: 100%;
+    }
+    .container_input+span>div{
+      border-top: 1px solid rgb(68,77,86);
+      padding: 8px 0px 8px 0px;
     }
     header span div{
     padding-top: 8px;
@@ -106,113 +196,195 @@ body{
     header span div span{
     color: rgb(88,96,105);
     }
+  }
 
-  }
- @media (max-width: 1012px){
-  header{
+.pages{
   display: block;
+}
+.page1{
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-image: url(https://assets-cdn.github.com/images/modules/site/heroes/simple-codelines.svg);
+  background-color: rgb(43, 49, 55);
+  background-size: cover;
+}
+.container-page1{
   position: relative;
-  padding-top: 16px;
-  padding-bottom:16px;
-  background-color: rgb(36,41,46);
-  }
-  .flex{
-  display: flex;/*设置为flex后,子项目不按block*/
-  }
-  .flex_justify_between{
-  justify-content: space-between;
-  }
-  .flex_items_center{
-  align-items: center;
-  }
-  .container{
   max-width: 1012px;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 40px;
   padding-left: 40px;
+  padding-right: 40px;
+}
+.container_content{
+  margin-left: -24px;
+  margin-right: -24px;
+}
+.page1-left{
   display: block;
-  }
-  #octicon{
-    fill:rgb(255,255,255);
-    cursor: pointer;
-  }
-  .text{
-  color: rgba(255,255,255,0.75);
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 16px;
-  }
-  header a{
+  padding-left: 24px;
+  padding-right: 24px;}
+  .page1-left a{
   text-decoration-line: none;
   text-decoration-color: rgb(255,255,255);
   text-decoration-style: solid;
   white-space: nowrap;
   color: rgb(255,255,255);
+  line-height: 36px;
+  font-weight: 400;
   }
-  .head_logo{
-  margin-left: -2px;
-  margin-right: 15px;
+.page1-left h1{
+  color: rgb(255,255,255);
+  font-weight: 300;
+  margin:0 0 16px 0;
+  text-align: left;
+}
+.page1-left p{
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 24px;
+  line-height: 36px;
+  font-size: 24px;
+  font-weight: 300;
+}
+.container_form{
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.container_form_content{
+  padding: 24px 16px 24px 16px;
+  background-color: rgb(250,251,252);
+  border-radius:3px;
+  color: rgb(88,96,105);
+}
+.container_form_content form{
+  margin-top: 0px;
+}
+.container_form_content dl{
+  margin: 0 0 15px 0;
+}
+.container_form_content dl:nth-of-type(3){
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.container_form_content dt{
+  cursor: normal;
+  position: static;
+  color: rgb(88,96,105);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  margin: 0 0 6px 0;
+}
+.container_form_content dd{
+  margin-left: 0/*默认40*/
+}
+.container_form_content dd input{
+  max-width: 100%;
+  width: 100%;
+  min-height: 46px;
+  padding: 10px;
+  margin: 0 5px 0 0;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(27,31,35,0.075);
+  line-height: 20px;
+  color: rgb(36,41,46);
+  word-spacing: 0px;
+  font-weight: 400;
+}
+.container_form_content dl dd p{
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 12px;
+  color: #6a737d;
+  line-height:18px
+}
+.container_form_content  button{
+  cursor: pointer;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(27,31,35,0.2);
+  border-radius: 6px;
+  background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
+  text-align: center;
+  font-weight: 600;
+  line-height: 20px;
+  color: rgb(255,255,255);
+  white-space: nowrap;
+}
+.container_form_content  button+p{
+  color: rgb(106,115,125);
+  margin-bottom: 0px;
+  line-height: 18px;
+  text-align: center;
+  height: 54px;
+  width: 332.328px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 12px;
+  color: #6a737d;
+}
+@media (min-width: 1012px){
+  .page1 h1{
+    font-size:72px;
+    line-height: 72px;
   }
-  .head_logo svg{
-  fill: currentColor;
-  float: left;/*有疑问,没有设置float,a的height计算为39 */
-  width: 32px;
-  height: 32px;
+  .page1-left p{
+    font-size: 26px;
   }
-  .container_nav_input{
-    display: none;
+}
+@media (max-width: 1012px){
+  .page1-left h1{
+    font-size:54px;
+    line-height: 54px;
   }
-  .open{
+  .page1-left p{
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px){
+  .page1-left h1{
+    font-size:54px;
+    line-height: 54px;
+  }
+  .container_content{
     display: block;
   }
-  header nav{
-    margin-top: 16px;
+  .page1-left h1{
+    text-align: center;
   }
-  header nav ul{
-  list-style-type: none;
-  list-style-image: none;
-  list-style-position: outside;
-  padding-left: 0;
-  margin-top:0;
-  margin-bottom: 0px;
+  .page1-left p{
+    text-align: center;
+    font-size: 21px;
   }
-  header nav ul li{
-  display:block;
-  border-top: 1px solid rgb(68,77,86);
-  padding: 16px 0px 16px 0px;
-  text-align: left;
-  margin: 0px;
+  .container_form{
+    margin: auto;
+    width: 66.66667%;
   }
-  .container_input{
-    border-top: 1px solid rgb(68,77,86);
-    padding: 16px 0px 16px 0px;
+}
+
+@media (max-width: 544px){
+  .container_form{
+    display: none;
   }
-  header input{
-  background-color:rgba(255,255,255,0.125) ;
-  border-radius: 3px;
-  font-weight: 400px;
-  line-height: 20px;
-  letter-spacing: normal;
-  font-size: 13px;
-  color: rgba(255,255,255,0.3);
-  margin: 0;
-  padding: 0px 0 0px 8px;
-  border: none;
-  min-height: 30px;
-  width: 100%;
+  .signup_little{
+    text-align: center;/*div没有宽度和高度的时候,内容在中间*/
   }
-  .container_input+span>div{
-    border-top: 1px solid rgb(68,77,86);
-    padding: 8px 0px 8px 0px;
-  }
-  header span div{
-  padding-top: 8px;
-  padding-bottom: 8px;
-  }
-  header span div a{
-  font-weight: 600;
-  }
-  header span div span{
-  color: rgb(88,96,105);
-  }
+  .signup_little a{
+      cursor: pointer;
+      padding: 12px;
+      border: 1px solid rgba(27,31,35,0.2);
+      border-radius: 6px;
+      background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
+      text-align: center;
+      text-decoration-line: none;
+      text-decoration-color: rgb(255,255,255);
+      text-decoration-style: solid;
+      white-space: nowrap;
+      color: rgb(255,255,255);
+      line-height: 36px;
+      font-weight: 400;
 }
