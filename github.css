@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;/*width+boder+padding+cotent*/
+
 }
 body{
   margin: 0px;
@@ -87,7 +88,7 @@ header{
       header input{
       background-color:rgba(255,255,255,0.125) ;
       border-radius: 3px;
-      font-weight: 400px;
+      font-weight: 400;
       line-height: 20px;
       letter-spacing: normal;
       font-size: 13px;
@@ -171,7 +172,7 @@ header{
     header input{
     background-color:rgba(255,255,255,0.125) ;
     border-radius: 3px;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 20px;
     letter-spacing: normal;
     font-size: 13px;
@@ -202,189 +203,481 @@ header{
   display: block;
 }
 .page1{
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 128px;
+  padding-bottom: 128px;
   background-image: url(https://assets-cdn.github.com/images/modules/site/heroes/simple-codelines.svg);
   background-color: rgb(43, 49, 55);
   background-size: cover;
 }
-.container-page1{
-  position: relative;
+  .container-page1{
+    position: relative;
+    max-width: 1012px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .container_content{
+    margin-left: -24px;
+    margin-right: -24px;
+
+  }
+  .page1-left{
+    display: block;
+    padding-left: 24px;
+    padding-right: 24px;}
+    .page1-left a{
+    text-decoration-line: none;
+    text-decoration-color: rgb(255,255,255);
+    text-decoration-style: solid;
+    white-space: nowrap;
+    color: rgb(255,255,255);
+    line-height: 36px;
+    font-weight: 400;
+    }
+  .page1-left h1{
+    color: rgb(255,255,255);
+    font-weight: 300;
+    margin:0 0 16px 0;
+    text-align: left;
+  }
+  .page1-left p{
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 24px;
+    line-height: 36px;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .container_form{
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .container_form_content{
+    padding: 24px 16px 24px 16px;
+    background-color: rgb(250,251,252);
+    border-radius:3px;
+    color: rgb(88,96,105);
+  }
+  .container_form_content form{
+    margin-top: 0px;
+  }
+  .container_form_content dl{
+    margin: 0 0 15px 0;
+  }
+  .container_form_content dl:nth-of-type(3){
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .container_form_content dt{
+    position: static;
+    color: rgb(88,96,105);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    margin: 0 0 6px 0;
+  }
+  .container_form_content dd{
+    margin-left: 0/*默认40*/
+  }
+  .container_form_content dd input{
+    max-width: 100%;
+    width: 100%;
+    min-height: 46px;
+    padding: 10px;
+    margin: 0 5px 0 0;
+    background-color: #fafbfc;
+    border: 1px solid #d1d5da;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(27,31,35,0.075);
+    line-height: 20px;
+    color: rgb(36,41,46);
+    word-spacing: 0px;
+    font-weight: 400;
+  }
+  .container_form_content dl dd p{
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #6a737d;
+    line-height:18px
+  }
+  .container_form_content  button{
+    cursor: pointer;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(27,31,35,0.2);
+    border-radius: 6px;
+    background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
+    text-align: center;
+    font-weight: 600;
+    line-height: 20px;
+    color: rgb(255,255,255);
+    white-space: nowrap;
+  }
+  .container_form_content  button:hover {
+    background-color: #269f42;
+    background-image: linear-gradient(-180deg, #2fcb53 0%, #269f42 90%);
+    background-position: -.5em;
+    border-color: rgba(27,31,35,0.5);
+}
+  .container_form_content  button+p{
+    color: rgb(106,115,125);
+    margin-bottom: 0px;
+    line-height: 18px;
+    text-align: center;
+    height: 54px;
+    width: 332.328px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #6a737d;
+  }
+  .signup_little{
+    display: none;}
+  @media (min-width: 1012px){
+    .page1 h1{
+      font-size:72px;
+      line-height: 72px;
+    }
+    .page1-left p{
+      font-size: 26px;
+    }
+  }
+  @media (max-width: 1012px){
+    .page1{
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+    .page1-left{
+      width: 58.33333%;
+    }
+    .container_form{
+      width: 41.66666%
+    }
+    .page1-left h1{
+      font-size:54px;
+      line-height: 54px;
+    }
+    .page1-left p{
+      font-size: 24px;
+    }
+  }
+  @media (max-width: 768px){
+    .page1-left {
+      margin: auto;
+      width: 100%;
+    }
+    .page1-left h1{
+      font-size:54px;
+      line-height: 54px;
+    }
+    .container_content{
+      display: block;
+    }
+    .page1-left h1{
+      text-align: center;
+    }
+    .page1-left p{
+      text-align: center;
+      font-size: 21px;
+    }
+    .container_form{
+      margin: auto;
+      width: 66.66667%;
+    }
+  }
+
+  @media (max-width: 544px){
+    .page1{
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+    .container_form{
+      display: none;
+    }
+    .signup_little{
+      display: block;
+      text-align: center;/*div没有宽度和高度的时候,内容在中间*//* WARNING:  */
+    }
+    .signup_little a{
+        cursor: pointer;
+        padding: 12px;
+        border: 1px solid rgba(27,31,35,0.2);
+        border-radius: 6px;
+        background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
+        text-align: center;
+        text-decoration-line: none;
+        text-decoration-color: rgb(255,255,255);
+        text-decoration-style: solid;
+        white-space: nowrap;
+        color: rgb(255,255,255);
+        line-height: 36px;
+        font-weight: 400;
+
+}}
+.page2{
+  padding-left:16px;
+  padding-right: 16px;
   max-width: 1012px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 40px;
-  padding-right: 40px;
 }
-.container_content{
-  margin-left: -24px;
-  margin-right: -24px;
+.page2_content{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
 }
-.page1-left{
-  display: block;
-  padding-left: 24px;
-  padding-right: 24px;}
-  .page1-left a{
-  text-decoration-line: none;
-  text-decoration-color: rgb(255,255,255);
-  text-decoration-style: solid;
-  white-space: nowrap;
-  color: rgb(255,255,255);
-  line-height: 36px;
-  font-weight: 400;
-  }
-.page1-left h1{
-  color: rgb(255,255,255);
-  font-weight: 300;
-  margin:0 0 16px 0;
-  text-align: left;
-}
-.page1-left p{
-  color: rgba(255,255,255,0.6);
-  margin-bottom: 24px;
-  line-height: 36px;
-  font-size: 24px;
-  font-weight: 300;
-}
-.container_form{
-  padding-left: 24px;
-  padding-right: 24px;
-}
-.container_form_content{
-  padding: 24px 16px 24px 16px;
-  background-color: rgb(250,251,252);
-  border-radius:3px;
-  color: rgb(88,96,105);
-}
-.container_form_content form{
+.page2 h3{
   margin-top: 0px;
-}
-.container_form_content dl{
-  margin: 0 0 15px 0;
-}
-.container_form_content dl:nth-of-type(3){
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-.container_form_content dt{
-  cursor: normal;
-  position: static;
-  color: rgb(88,96,105);
-  font-size: 14px;
+  margin-bottom: 24px;
+  color: rgb(106,115,125);
+  font-size: 22px;
   font-weight: 400;
-  line-height: 21px;
-  text-align: left;
-  margin: 0 0 6px 0;
-}
-.container_form_content dd{
-  margin-left: 0/*默认40*/
-}
-.container_form_content dd input{
-  max-width: 100%;
-  width: 100%;
-  min-height: 46px;
-  padding: 10px;
-  margin: 0 5px 0 0;
-  background-color: #fafbfc;
-  border: 1px solid #d1d5da;
-  border-radius: 5px;
-  box-shadow: inset 0 1px 2px rgba(27,31,35,0.075);
-  line-height: 20px;
-  color: rgb(36,41,46);
-  word-spacing: 0px;
-  font-weight: 400;
-}
-.container_form_content dl dd p{
-  margin-top: 5px;
-  margin-bottom: 0;
-  font-size: 12px;
-  color: #6a737d;
-  line-height:18px
-}
-.container_form_content  button{
-  cursor: pointer;
-  width: 100%;
-  padding: 12px;
-  border: 1px solid rgba(27,31,35,0.2);
-  border-radius: 6px;
-  background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
   text-align: center;
-  font-weight: 600;
-  line-height: 20px;
-  color: rgb(255,255,255);
+  line-height: 1.25;
+}
+.page2 ul{
+  flex-wrap: wrap;
+  margin-top: 16px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+  filter: grayscale(100%);
+}
+.page2 li{
+  list-style: none;
+}
+@media (min-width:768px) {
+
+.page2 img{
+  position: relative;
+  margin: 16px 10px;
+  padding-left: 32px;
+  padding-right:32px;
+  text-align: center;
+  height: 25px;
+  width: auto;
+}
+.page2 h3{
+  font-size: 22px;
+}
+}
+@media (max-width:768px){
+  .page2 img{
+    position: relative;
+    margin: 10px;
+    padding-left: 24px;
+    padding-right:24px;
+    text-align: center;
+    height: 20px;
+    width: auto;
+}
+.page2 h3{
+  font-size: 20px;
+}
+}
+@media (max-width:544px){
+  .page2 img{
+    position: relative;
+    margin: 10px;
+    padding-left: 8px;
+    padding-right:8px;
+    text-align: center;
+    height: 20px;
+    width: auto;
+}
+.page2 h3{
+  font-size: 18px;
+}
+}
+.page2 span{
+  margin-top: 16px;
+  text-align: center;
+  line-height: 18px;
+  font-size: 12px;
+  color: rgb(106,115,125);
+}
+
+.page3{
+  border:1px solid rgb(225,228,232);
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+.page3_top{
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right:16px;
+  padding-bottom: 40px;
+  max-width: 1012px;
+}
+.page3_top h6{
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+  font-weight: 400;
+  color: rgb(88,96,105);
+}
+.page3_top h2{
+  margin-bottom: 8px;
+  margin-top: 16px;
+  color: rgb(36,41,46);
+  text-align: center;
+  font-weight: 300;
+  font-size: 54px;
+  line-height: 67.5px;
+}
+.page3_top p{
+  color: rgb(88,96,105);
+  margin-bottom: 30px;
+  margin-top: 0px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  width: 66.66667%;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(88,96,105);
+  line-height: 30px;
+}
+.page3_top div{
+  text-align: center;
+}
+.page3_top a{
+  border:rgba(27,31,35,0.2) solid 1px;
+  border-radius: 6px;
+  cursor:pointer;
+  padding:12px 20px;
+  text-decoration-line: none;
+  color: rgb(3,102,214);
   white-space: nowrap;
 }
-.container_form_content  button+p{
-  color: rgb(106,115,125);
-  margin-bottom: 0px;
-  line-height: 18px;
-  text-align: center;
-  height: 54px;
-  width: 332.328px;
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 0;
-  font-size: 12px;
-  color: #6a737d;
+.page3_bottom{
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 1280px;
 }
-@media (min-width: 1012px){
-  .page1 h1{
-    font-size:72px;
-    line-height: 72px;
-  }
-  .page1-left p{
-    font-size: 26px;
-  }
+.page3_content{
+  padding-top: 40px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
-@media (max-width: 1012px){
-  .page1-left h1{
-    font-size:54px;
-    line-height: 54px;
-  }
-  .page1-left p{
-    font-size: 24px;
-  }
-}
-@media (max-width: 768px){
-  .page1-left h1{
-    font-size:54px;
-    line-height: 54px;
-  }
-  .container_content{
-    display: block;
-  }
-  .page1-left h1{
-    text-align: center;
-  }
-  .page1-left p{
-    text-align: center;
-    font-size: 21px;
-  }
-  .container_form{
-    margin: auto;
-    width: 66.66667%;
+@media (min-width:1012px) {
+  .page3_left{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 16px;
+    width:58.3333%
   }
 }
 
-@media (max-width: 544px){
-  .container_form{
-    display: none;
+@media (max-width:1012px) {
+  .page3_left{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    width:58.3333%;
   }
-  .signup_little{
-    text-align: center;/*div没有宽度和高度的时候,内容在中间*/
+  .page3_content{
+    display: block;
   }
-  .signup_little a{
-      cursor: pointer;
-      padding: 12px;
-      border: 1px solid rgba(27,31,35,0.2);
-      border-radius: 6px;
-      background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
-      text-align: center;
-      text-decoration-line: none;
-      text-decoration-color: rgb(255,255,255);
-      text-decoration-style: solid;
-      white-space: nowrap;
-      color: rgb(255,255,255);
-      line-height: 36px;
-      font-weight: 400;
+}
+@media (max-width:544px) {
+  .page3_left{
+    width:83.3333%;
+  }
+}
+.page3_left img{
+  margin-left: 0px;
+  margin-right: 0px;
+  max-width: 100%;
+}
+@media (min-width:1012px) {
+  .page3_right{
+    width: 41.66667%;
+  }
+  .page3_right a:hover .img_container{
+    opacity: 0.7;
+  }
+}
+
+.page3_right a{
+  text-decoration: none;
+}
+.page3_right a .img_container{
+  position: absolute;
+  width: 15%;
+  left: 40%;
+  right: auto;
+  opacity: 0;
+}
+.page3_right img{
+  margin-left: 0px;
+  margin-right: 0px;
+  max-width: 100%;
+}
+.page3_right_container:hover{
+  border-color:#d1d5da;
+  box-shadow: 0 1px 15px rgba(27,31,35,0.15);}
+.page3_right_container{
+  border: solid 1px transparent;
+  transition: box-shadow 0.3s, border-color 0.3s;
+  align-items: center;
+}
+@media (max-width:544px) {
+  .page3_right_container{
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .page3_right_content h3{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+  }
+}
+@media (min-width:544px) {
+  .page3_right_content h3{
+    font-size: 22px;
+    line-height: 33px;
+  }
+  .page3_right_container{
+    padding: 24px;
+    margin-top: 0px;
+    margin: 0px;
+  }
+}
+.page3_right_content {
+  width: 83.3333%;
+}
+.page3_right_content h3{
+  margin-top: 0px;
+  margin-bottom: 4px;
+  color:rgb(36,41,46);
+  font-weight: 400;
+  word-wrap: break-word;
+}
+.page3_right_content p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color:rgb(36,41,46);
+  font-size: 14px;
+  line-height: 21px;
+  word-wrap: break-word;
+}
+@media (max-width:1012px) {
+  .page3_top h2{
+    font-size: 48px;
+  }
+}
+@media (max-width:768px) {
+  .page3_top h2{
+  font-size:36px;
+  font-weight: 300;
+}
 }
